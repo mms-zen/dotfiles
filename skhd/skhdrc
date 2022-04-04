@@ -3,3 +3,9 @@ hyper - h :  yabai -m window --focus west
 hyper - j :  yabai -m window --focus south
 hyper - k :  yabai -m window --focus north
 hyper - l :  yabai -m window --focus east
+
+
+
+# applications quick run
+hyper - t : open -a /Applications/iTerm.app
+hyper - f : open -a /Applications/Firefox.app
