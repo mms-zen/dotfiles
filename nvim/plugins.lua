@@ -1,20 +1,3 @@
--- General options
-vim.opt.backup = false
-vim.opt.swapfile = false
-
-vim.opt.relativenumber = true
-vim.opt.number = true
-
-vim.opt.hlsearch = true
-vim.opt.ignorecase = true
-
--- Keymaps
-opts = { noremap = true }
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", opts)
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>k", opts)
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", opts)
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", opts)
-
 local fn = vim.fn
 
 -- Automatically install packer
