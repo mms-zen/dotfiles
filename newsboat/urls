@@ -1,4 +1,5 @@
 https://michal.sapka.pl/en/index.xml
+https://michal.sapka.pl/en/vim/index.xml
 ----------------
 https://cprss.s3.amazonaws.com/rubyweekly.com.xml
 https://feeds.feedburner.com/digest-programming
@@ -12,9 +13,17 @@ https://fabiensanglard.net/rss.xml
 https://www.gog.com/pl/news/feed
 https://grumpygamer.com/rss
 https://lunduke.substack.com/feed
+https://frame.work/blog.rss
+https://lukesmith.xyz/rss.xml
+https://odysee.com/$/rss/@Luke/70
+https://odysee.com/$/rss/@AlphaNerd:8
+https://odysee.com/$/rss/@TheLinuxExperiment:e
+https://odysee.com/$/rss/@DistroTube:2
+https://odysee.com/$/rss/@danwood:0
 ----------------
 https://kielban.pl/feed/
 ----------------
-https://lukesmith.xyz/rss.xml
-https://odysee.com/$/rss/@Luke/70
-
+https://archlinux.org/feeds/news/
+https://www.pine64.org/feed/
+https://neovim.io/news.xml
+https://github.com/koekeishiya/yabai/releases.atom
