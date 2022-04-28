@@ -1,12 +1,19 @@
+local set = vim.opt -- set options
+
 -- General options
-vim.opt.backup = false
-vim.opt.swapfile = false
+set.backup = false
+set.swapfile = false
 
-vim.opt.relativenumber = true
-vim.opt.number = true
+set.relativenumber = true
+set.number = true
 
-vim.opt.hlsearch = true
-vim.opt.ignorecase = true
+set.hlsearch = true
+set.ignorecase = true
+
+-- Tab stops because I am not an evel person
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
 
 -- Keymaps
 opts = { noremap = true }
