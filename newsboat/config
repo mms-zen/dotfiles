@@ -1,6 +1,7 @@
 #show-read-feeds no
 auto-reload yes
 
+include "/usr/share/doc/newsboat/contrib/colorschemes/solarized-dark"
 browser "/usr/bin/open -a '/Applications/Brave\ Browser.app/' %u"
 
 bind-key j down
