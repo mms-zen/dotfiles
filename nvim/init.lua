@@ -13,7 +13,6 @@ set.ignorecase = true
 
 set.syntax = "ON"
 set.termguicolors = true
-cmd('colorscheme NeoSolarized')
 
 -- Tab stops because I am not an evel person
 set.tabstop = 2
@@ -80,5 +79,7 @@ return packer.startup(function(use)
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
+	vim.cmd('colorscheme NeoSolarized')
 end)
+
 
