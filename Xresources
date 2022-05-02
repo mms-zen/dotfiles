@@ -1,5 +1,5 @@
 ! Source Code Proo
-!*.font:         Source Code Pro:pixelsize=13:antialias=true:autohint=true:weight:SemiBold
+ *.font:         Source Code Pro:pixelsize=13:antialias=true:autohint=true:weight:SemiBold
 
 ! Solarzied Dark
 
@@ -15,8 +15,7 @@
 *background:            S_base03
 *foreground:            S_base0
 *fadeColor:             S_base03
-! *cursorColor:           S_base1
-*cursorColor:          #ffffff 
+*cursorColor:           S_base1
 *pointerColorBackground:S_base01
 *pointerColorForeground:S_base1
 
