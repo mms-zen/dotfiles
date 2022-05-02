@@ -1,6 +1,5 @@
 local set = vim.opt -- set options
 local cmd = vim.api.nvim_command
-
 -- General options
 set.backup = false
 set.swapfile = false
@@ -72,15 +71,30 @@ return packer.startup(function(use)
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-	use "overcache/NeoSolarized" -- Solarized theme for NeoVim
 	use "Mofiqul/dracula.nvim" -- Dracula theme
+	use {
+		'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup() end
+	}
+	use {
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icon
+		}
+	}
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+	vim.cmd('colorscheme dracula')
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
-	vim.cmd('colorscheme dracula')
 end)
-
-
