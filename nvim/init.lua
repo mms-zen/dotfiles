@@ -19,11 +19,17 @@ set.softtabstop = 2
 set.shiftwidth = 2
 
 -- Keymaps
-opts = { noremap = true }
+opts = { noremap = true, silent = true }
+vim.g.mapleader = " "
+
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", opts)
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>k", opts)
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", opts)
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", opts)
+
+vim.api.nvim_set_keymap("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
 
 local fn = vim.fn
 
