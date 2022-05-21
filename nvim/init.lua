@@ -200,8 +200,8 @@ cmp.setup {
   },
 }
 
--- LSP
 require "user.lsp"
+require "user.treesitter"
 
 
 -- Install your plugins here
@@ -247,6 +247,12 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+	--treesitter
+	use { 
+		"nvim-treesitter/nvim-treesitter",
+		run = 'TSUpdate'
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
