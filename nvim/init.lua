@@ -201,16 +201,9 @@ cmp.setup {
 }
 
 -- LSP
-require("nvim-lsp-installer").setup {}
---
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+require "user.lsp"
 
--- The following example advertise capabilities to `clangd`.
-require'lspconfig'.clangd.setup {
-  capabilities = capabilities,
-}
+
 -- Install your plugins here
 return packer.startup(function(use)
 	-- My plugins here
@@ -250,15 +243,10 @@ return packer.startup(function(use)
 	use "L3MON4D3/LuaSnip"
 	use "rafamadriz/friendly-snippets"
 
-	use "williamboman/nvim-lsp-installer"
-	use {
-		'neovim/nvim-lspconfig',
-		 config = function()
-       require("nvim-lsp-installer").setup {}
-       local lspconfig = require("lspconfig")
-       lspconfig.sumneko_lua.setup {}
-      end
-		}
+	use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
