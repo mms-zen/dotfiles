@@ -118,8 +118,8 @@ local kind_icons = {
   Operator = "",
   TypeParameter = "",
 }
+--
 -- find more here: https://www.nerdfonts.com/cheat-sheet
-
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -176,14 +176,16 @@ cmp.setup {
   --    vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
        vim_item.kind = string.format('%s', vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        luasnip = "[S]",
-        buffer = "[B]",
-        path = "[P]",
+        luasnip = "[Snip]",
+				nvim_lsp = "[LSP]",
+        buffer = "[Buff]",
+        path = "[Path]",
       })[entry.source.name]
       return vim_item
     end,
   },
   sources = {
+    { name = 'nvim_lsp' },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
@@ -198,9 +200,18 @@ cmp.setup {
   },
 }
 
+-- LSP
+require("nvim-lsp-installer").setup {}
+--
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+-- The following example advertise capabilities to `clangd`.
+require'lspconfig'.clangd.setup {
+  capabilities = capabilities,
+}
 -- Install your plugins here
-
 return packer.startup(function(use)
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
@@ -226,17 +237,28 @@ return packer.startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	vim.cmd('colorscheme dracula')
-	
+
 	-- cmp
 	use "hrsh7th/nvim-cmp"
 	use "hrsh7th/cmp-buffer"
 	use "hrsh7th/cmp-path"
 	use "hrsh7th/cmp-cmdline"
 	use "saadparwaiz1/cmp_luasnip"
+	use "hrsh7th/cmp-nvim-lsp"
 
 	--snippets
 	use "L3MON4D3/LuaSnip"
 	use "rafamadriz/friendly-snippets"
+
+	use "williamboman/nvim-lsp-installer"
+	use {
+		'neovim/nvim-lspconfig',
+		 config = function()
+       require("nvim-lsp-installer").setup {}
+       local lspconfig = require("lspconfig")
+       lspconfig.sumneko_lua.setup {}
+      end
+		}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
