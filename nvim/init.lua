@@ -202,6 +202,7 @@ cmp.setup {
 
 require "user.lsp"
 require "user.treesitter"
+require "user.neorg"
 
 
 -- Install your plugins here
@@ -249,9 +250,18 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
 	--treesitter
-	use { 
+	use {
 		"nvim-treesitter/nvim-treesitter",
 		run = 'TSUpdate'
+	}
+
+	-- neorg
+	use {
+		"nvim-neorg/neorg",
+		after = "nvim-treesitter", -- Ensures that neorg loads after nvim-treesitter
+		requires = { 
+			"nvim-lua/plenary.nvim"
+		}
 	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
