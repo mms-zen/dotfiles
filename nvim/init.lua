@@ -23,6 +23,8 @@ set.smartindent = true
 
 set.scrolloff=8
 
+set.colorcolumn="90"
+
 -- Keymaps
 opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
