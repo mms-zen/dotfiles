@@ -18,6 +18,10 @@ set.termguicolors = true
 set.tabstop = 2
 set.softtabstop = 2
 set.shiftwidth = 2
+set.expandtab = true
+set.smartindent = true
+
+set.scrolloff=8
 
 -- Keymaps
 opts = { noremap = true, silent = true }
