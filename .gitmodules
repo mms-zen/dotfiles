@@ -1,0 +1,3 @@
+[submodule "dotfiles-zendesk"]
+	path = dotfiles-zendesk
+	url = git@github.com:michalsapka/dotfiles-zendesk.git
