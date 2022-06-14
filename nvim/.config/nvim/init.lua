@@ -210,6 +210,7 @@ require "user.lsp"
 require "user.treesitter"
 require "user.neorg"
 
+vim.cmd('colorscheme gruvbox')
 
 -- Install your plugins here
 return packer.startup(function(use)
@@ -218,6 +219,7 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 	use "Mofiqul/dracula.nvim" -- Dracula theme
+  use "morhetz/gruvbox"
 	use {
 		'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
@@ -236,7 +238,6 @@ return packer.startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	vim.cmd('colorscheme dracula')
 
 	-- cmp
 	use "hrsh7th/nvim-cmp"
