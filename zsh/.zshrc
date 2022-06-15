@@ -102,5 +102,5 @@ export LANG=en_US.UTF-8
 alias vi="vim"
 alias vim="nvim"
 
-export PATH=$PATH:~/.local/share/bin
+export PATH=$PATH:~/.local/bin
 . /opt/asdf-vm/asdf.sh
