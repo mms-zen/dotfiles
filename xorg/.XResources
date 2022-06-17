@@ -14,6 +14,9 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+! This is radom value that looks good.
+Xft.dpi: 80
+
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-urxvt256.xresources
 ! Description: Retro groove colorscheme generalized

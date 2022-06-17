@@ -20,7 +20,7 @@ dpi:
   y: 96.0
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 8
+tabspaces: 13
 
   # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -46,7 +46,7 @@ font:
         style: Medium Italic
 
   # Point size of the font
-  size: 7
+  size: 11
 
 # Colors (Gruvbox Material Dark Medium)
 colors:
