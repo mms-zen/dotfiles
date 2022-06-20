@@ -214,7 +214,11 @@ require "user.lsp"
 require "user.treesitter"
 require "user.neorg"
 
+-- Style
 vim.cmd('colorscheme gruvbox')
+require('lualine').setup{
+  options = { theme = 'gruvbox' }
+}
 
 -- Install your plugins here
 return packer.startup(function(use)
