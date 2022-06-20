@@ -103,4 +103,4 @@ alias vi="vim"
 alias vim="nvim"
 
 export PATH=$PATH:~/.local/bin
-. /opt/asdf-vm/asdf.sh
+. $ASDF_DIR/asdf.sh
