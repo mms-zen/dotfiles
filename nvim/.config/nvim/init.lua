@@ -34,8 +34,8 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>k", opts)
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", opts)
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", opts)
 
-vim.api.nvim_set_keymap("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-P>", ":lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
 
 local fn = vim.fn
@@ -206,6 +206,10 @@ cmp.setup {
   },
 }
 
+
+require('telescope').load_extension('fzf')
+
+
 require "user.lsp"
 require "user.treesitter"
 require "user.neorg"
@@ -238,6 +242,8 @@ return packer.startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
 
 	-- cmp
 	use "hrsh7th/nvim-cmp"
