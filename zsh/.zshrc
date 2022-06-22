@@ -104,3 +104,4 @@ alias vim="nvim"
 
 export PATH=$PATH:~/.local/bin
 . $ASDF_DIR/asdf.sh
+eval "$(starship init zsh)"
