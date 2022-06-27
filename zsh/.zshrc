@@ -102,6 +102,10 @@ export LANG=en_US.UTF-8
 alias vi="vim"
 alias vim="nvim"
 
+alias ll="exa -l -g --icons"
+alias lla="ll -a"
+
 export PATH=$PATH:~/.local/bin
 . $ASDF_DIR/asdf.sh
 eval "$(starship init zsh)"
+
