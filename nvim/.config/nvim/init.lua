@@ -29,6 +29,10 @@ set.colorcolumn="90"
 opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
+-- Create splits
+vim.api.nvim_set_keymap("n", "ss", ":split:<Return><C-w>w", opts)
+vim.api.nvim_set_keymap("n", "sv", ":vsplit<Return><C-w>w", opts)
+-- Move between split
 vim.api.nvim_set_keymap("n", "sh", "<C-w>h", opts)
 vim.api.nvim_set_keymap("n", "sk", "<C-w>k", opts)
 vim.api.nvim_set_keymap("n", "sj", "<C-w>j", opts)
