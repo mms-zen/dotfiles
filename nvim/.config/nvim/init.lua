@@ -249,6 +249,7 @@ require "user.neorg"
 
 -- Style
 vim.cmd('colorscheme gruvbox')
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 require('lualine').setup{
   options = { theme = 'gruvbox' }
 }
