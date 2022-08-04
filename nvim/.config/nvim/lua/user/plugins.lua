@@ -45,6 +45,56 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+	use "Mofiqul/dracula.nvim" -- Dracula theme
+  use "morhetz/gruvbox"
+	use {
+		'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup() end
+	}
+	use {
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icon
+		}
+	}
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+
+	-- cmp
+	use "hrsh7th/nvim-cmp"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-path"
+	use "hrsh7th/cmp-cmdline"
+	use "saadparwaiz1/cmp_luasnip"
+	use "hrsh7th/cmp-nvim-lsp"
+
+	--snippets
+	use "L3MON4D3/LuaSnip"
+	use "rafamadriz/friendly-snippets"
+
+	use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  use "rhysd/vim-grammarous"
+
+	--treesitter
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = 'TSUpdate'
+	}
+
+	-- neorg
+  use "vimwiki/vimwiki"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
