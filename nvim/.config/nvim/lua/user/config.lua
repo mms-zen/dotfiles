@@ -22,10 +22,12 @@ set.softtabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
 set.smartindent = true
+set.autoindent = true
+set.ai = true
 
-set.scrolloff=8
+set.scrolloff = 8
 
-set.colorcolumn="90"
+set.colorcolumn = "90"
 
 -- Keymaps
 opts = { noremap = true, silent = true }
@@ -43,6 +45,7 @@ api.nvim_set_keymap("n", "sl", "<C-w>l", opts)
 api.nvim_set_keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>", opts)
 api.nvim_set_keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
 api.nvim_set_keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
+api.nvim_set_keymap("n", "<leader>r", ":lua require('telescope.builtin').resume()<CR>", opts)
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -52,3 +55,4 @@ keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+
