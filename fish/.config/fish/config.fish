@@ -27,6 +27,3 @@ switch (uname)
     source (dirname (status --current-filename))/config-linux.fish
 end
 
-source /opt/asdf-vm/asdf.fish
-
-
