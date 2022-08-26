@@ -1,4 +1,3 @@
-
 set fish_greeting ""
 
 # nvim for all
@@ -10,6 +9,7 @@ alias gaa "git add ."
 alias gc "git commit"
 alias gp "git push"
 alias gst "git status"
+alias gco "git checkout"
 
 set -gx TERM xterm-256color
 
@@ -26,4 +26,5 @@ switch (uname)
   case Linux
     source (dirname (status --current-filename))/config-linux.fish
 end
+source (dirname (status --current-filename))/config-zendesk.fish
 
