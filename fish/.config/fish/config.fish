@@ -41,3 +41,5 @@ switch (uname)
 end
 source (dirname (status --current-filename))/config-zendesk.fish
 
+# prompt config
+starship init fish | source
