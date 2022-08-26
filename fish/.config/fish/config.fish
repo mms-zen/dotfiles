@@ -1,7 +1,12 @@
 set fish_greeting ""
+set -gx TERM xterm-256color
 
 # nvim for all
 command -qv nvim && alias vim nvim && alias vi nvim
+
+# exa
+alias ll="exa -l --icons"
+alias lla="exa -la --icons"
 
 # git aliases as muscle memory die hard
 alias ga "git add"
@@ -11,7 +16,6 @@ alias gp "git push"
 alias gst "git status"
 alias gco "git checkout"
 
-set -gx TERM xterm-256color
 
 # theme
 set -g theme_color_scheme terminal-dark
