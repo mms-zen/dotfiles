@@ -5,6 +5,8 @@ set -gx TERM xterm-256color
 command -qv nvim && alias vim nvim && alias vi nvim
 set -gx EDITOR nvim
 
+fish_vi_key_bindings
+
 # exa
 alias ll="exa -l --icons"
 alias lla="exa -la --icons"
@@ -16,6 +18,7 @@ alias gc "git commit"
 alias gp "git push"
 alias gst "git status"
 alias gco "git checkout"
+alias gs "gst"
 
 # paths
 set -gx PATH bin $PATH
