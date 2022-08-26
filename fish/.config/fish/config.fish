@@ -1,8 +1,9 @@
-set fish_greeting ""
+set fish_greeting "My terminal? I like to keep it where my heart used to be."
 set -gx TERM xterm-256color
 
 # nvim for all
 command -qv nvim && alias vim nvim && alias vi nvim
+set -gx EDITOR nvim
 
 # exa
 alias ll="exa -l --icons"
@@ -15,6 +16,11 @@ alias gc "git commit"
 alias gp "git push"
 alias gst "git status"
 alias gco "git checkout"
+
+# paths
+set -gx PATH bin $PATH
+set -gx PATH ~/bin $PATH
+set -gx PATH ~/.local/bin $PATH
 
 
 # theme
