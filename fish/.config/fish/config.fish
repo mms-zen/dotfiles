@@ -13,7 +13,7 @@ alias lla="exa -la --icons"
 
 # git aliases as muscle memory die hard
 alias ga "git add"
-alias gaa "git add ."
+alias gaa "git add --all"
 alias gc "git commit"
 alias gp "git push"
 alias gst "git status"
