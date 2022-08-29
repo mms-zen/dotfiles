@@ -20,6 +20,11 @@ alias gst "git status"
 alias gco "git checkout"
 alias gs "gst"
 
+# ruby aliases
+alias be "bundle exec"
+alias rspec "bundle exec rspec"
+alias rspecf "bundle exec rspec --only-failures"
+
 # paths
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
