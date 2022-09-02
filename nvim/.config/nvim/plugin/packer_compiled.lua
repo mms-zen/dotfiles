@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/Users/msapka/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/msapka/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/msapka/.local/share/nvim/site/pack/packer/start/lualine.nvim",
