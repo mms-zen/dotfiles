@@ -42,10 +42,11 @@ api.nvim_set_keymap("n", "sk", "<C-w>k", opts)
 api.nvim_set_keymap("n", "sj", "<C-w>j", opts)
 api.nvim_set_keymap("n", "sl", "<C-w>l", opts)
 
-api.nvim_set_keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>", opts)
+api.nvim_set_keymap("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
 api.nvim_set_keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
 api.nvim_set_keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
-api.nvim_set_keymap("n", "<leader>r", ":lua require('telescope.builtin').resume()<CR>", opts)
+api.nvim_set_keymap("n", "<leader>fr", ":lua require('telescope.builtin').resume()<CR>", opts)
+api.nvim_set_keymap("n", "<leader>fp", ":Telescope ghq list<CR>", opts)
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

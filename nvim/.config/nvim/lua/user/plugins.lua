@@ -61,12 +61,13 @@ return packer.startup(function(use)
 			'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		}
 	}
-	use {
-		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope-ghq.nvim'
+    }
+  }
 
 	-- cmp
 	use "hrsh7th/nvim-cmp"
