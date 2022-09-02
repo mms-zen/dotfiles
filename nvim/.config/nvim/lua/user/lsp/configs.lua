@@ -1,15 +1,18 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
-	return
-end
+local status, mason = pcall(require, "mason")
+if (not status) then return end
 
-local lspconfig = require("lspconfig")
+mason.setup {}
+
+local status2, mason_lsp = pcall(require, "mason-lspconfig")
+if (not status2) then return end
 
 local servers = { "terraformls", "jsonls", "sumneko_lua", "gopls", "solargraph", "jdtls" }
-
-lsp_installer.setup {
-	ensure_installed = servers
+mason_lsp.setup {
+  ensure_installed = servers
 }
+
+local status3, lspconfig = pcall(require, "lspconfig")
+if (not status3) then return end
 
 for _, server in pairs(servers) do
 	local opts = {
