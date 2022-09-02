@@ -38,6 +38,7 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+# OS specific configurations 
 switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish
@@ -46,5 +47,10 @@ switch (uname)
 end
 source (dirname (status --current-filename))/config-zendesk.fish
 
+# local config, not versionated at is contains secrets
+set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+if test -f $LOCAL_CONFIG
+  source $LOCAL_CONFIG
+end
 # prompt config
 starship init fish | source
