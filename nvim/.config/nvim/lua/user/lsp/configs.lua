@@ -6,7 +6,7 @@ mason.setup {}
 local status2, mason_lsp = pcall(require, "mason-lspconfig")
 if (not status2) then return end
 
-local servers = { "terraformls", "jsonls", "sumneko_lua", "gopls", "solargraph", "jdtls" }
+local servers = { "terraformls", "jsonls", "sumneko_lua", "gopls", "solargraph", "jdtls", "tsserver" }
 mason_lsp.setup {
   ensure_installed = servers
 }
