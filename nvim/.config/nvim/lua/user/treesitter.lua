@@ -21,3 +21,10 @@ configs.setup {
     enable_autocmd = false,
   },
 }
+
+local status_ok2, context = pcall(require, "treesitter-context")
+if not status_ok2 then
+  return
+end
+
+context.setup {}
