@@ -46,7 +46,7 @@ font:
         style: Medium Italic
 
   # Point size of the font
-  size: 11
+  size: 7
 
 # Colors (Gruvbox Material Dark Medium)
 colors:
