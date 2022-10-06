@@ -86,11 +86,12 @@ chsh -s /usr/bin/fish
 # Install nerd font
 
 cd ~/Downloads
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/SourceCodePro.zip
-unzip SourceCodePro
 mkdir ~/.local/share/fonts
-mv *ttf ~/.local/share/fonts
-fc-cache -fv
+git clone git@github.com:ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh FiraCode
+./install.sh SourceCodePro
+
 
 
 
