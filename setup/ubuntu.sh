@@ -83,6 +83,18 @@ stow alacritty --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME
 
 chsh -s /usr/bin/fish
 
+# Install nerd font
+
+cd ~/Downloads
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/SourceCodePro.zip
+unzip SourceCodePro
+mkdir ~/.local/share/fonts
+mv *ttf ~/.local/share/fonts
+fc-cache -fv
+
+
+
+
 echo "Setup done!"
 
 
@@ -90,6 +102,4 @@ echo "Setup done!"
 
 
 #other:
-#- adfg
 #- gh-cli - https://garywoodfine.com/how-to-install-github-cli-on-linux/
-#- ghq
