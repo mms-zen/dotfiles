@@ -10,6 +10,7 @@ flatpak install \
 	-y
 
 sudo apt-add-repository ppa:fish-shell/release-3
+sudo add-apt-repository ppa:neovim-ppa/stable
 
 sudo apt update && sudo apt upgrade
 sudo apt install \
@@ -23,10 +24,10 @@ sudo apt install \
 	ripgrep \
 	fzf \
 	stow \
-	neovim \
 	exa \
 	starship \
 	tldr \
+  neovim \
 	-y
 
 curl -sS https://starship.rs/install.sh | sh

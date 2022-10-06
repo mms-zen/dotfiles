@@ -15,3 +15,10 @@ vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 vim.keymap.set("v", "<leader>ca", "<cmd><C-U>saga range_code_action<CR>", opts)
+
+-- Mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)

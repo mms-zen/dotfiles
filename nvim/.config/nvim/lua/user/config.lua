@@ -48,12 +48,6 @@ api.nvim_set_keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffer
 api.nvim_set_keymap("n", "<leader>fr", ":lua require('telescope.builtin').resume()<CR>", opts)
 api.nvim_set_keymap("n", "<leader>fp", ":Telescope ghq list<CR>", opts)
 
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
