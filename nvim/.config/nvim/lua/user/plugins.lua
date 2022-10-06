@@ -45,8 +45,16 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-	use "Mofiqul/dracula.nvim" -- Dracula theme
-  use "morhetz/gruvbox"
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+      require("catppuccin").setup()
+      vim.api.nvim_command "colorscheme catppuccin"
+    end
+  }
+
 	use {
 		'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
