@@ -90,24 +90,12 @@ stow alacritty --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME
 
 chsh -s /usr/bin/fish
 
-# Install nerd font
+# Install Tmux plugins
 
-cd ~/Downloads
-mkdir ~/.local/share/fonts
-git clone git@github.com:ryanoasis/nerd-fonts.git
-cd nerd-fonts
-./install.sh FiraCode
-./install.sh SourceCodePro
-
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 
 
 
 echo "Setup done!"
-
-
-
-
-
-#other:
-#- gh-cli - https://garywoodfine.com/how-to-install-github-cli-on-linux/
