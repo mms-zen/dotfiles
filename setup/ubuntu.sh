@@ -14,8 +14,8 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo add-apt-repository ppa:neovim-ppa/stable -y
 
 sudo apt update && sudo apt upgrade
 sudo apt install \
@@ -76,6 +76,8 @@ asdf install
 
 # Install dotfiles
 
+rm ~/.tool-versions
+
 ghq get -p git@github.com/michalsapka/dotfiles.git
 
 cd "$HOME/ghq/github.com/michalsapka/dotfiles"
@@ -85,6 +87,7 @@ stow fish --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow zsh --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow bin --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow alacritty --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
+stow asdf --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 
 # Use Fish shell
 
@@ -95,7 +98,8 @@ chsh -s /usr/bin/fish
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
+# Install all asdf packages
 
-
+asdf install
 
 echo "Setup done!"
