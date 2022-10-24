@@ -30,7 +30,7 @@ sudo apt install \
 	fzf \
 	stow \
 	exa \
-	starship \
+	xmodmap \
 	tldr \
   neovim \
   gh \
