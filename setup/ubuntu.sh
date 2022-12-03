@@ -88,6 +88,7 @@ stow zsh --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow bin --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow alacritty --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 stow asdf --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
+stow newsboat --dir="$HOME/ghq/github.com/michalsapka/dotfiles" --target="$HOME"
 
 # Use Fish shell
 
