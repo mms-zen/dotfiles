@@ -1,7 +1,7 @@
 #show-read-feeds no
 auto-reload yes
 
-include "/usr/share/doc/newsboat/contrib/colorschemes/solarized-dark"
+#include "/usr/share/doc/newsboat/contrib/colorschemes/solarized-dark"
 #browser "/usr/bin/open -a '/Applications/Brave\ Browser.app/' %u"
 browser "exec firefox %u"
 
