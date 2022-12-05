@@ -1,0 +1,20 @@
+# vim: filetype=muttrc
+
+source ~/.config/neomutt/colors
+source ~/.config/neomutt/accounts
+
+
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+bind index,pager B sidebar-toggle-visible
+set imap_check_subscribed
+
+
+
+
+
+# Disable saving outgoing mail since Gmail saves them by default. set record = ""
+#
+#
+auto_view text/html
+alternative_order text/enriched text/plain text/html text
