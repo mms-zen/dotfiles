@@ -41,7 +41,9 @@ alias ccf="cd ~/.config"
 # Zendesk stuff
 alias grid="docker run -it --rm -v ~/.grid.yml:/root/.grid.yml -v /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v ~/.ssh:/root/.ssh -v ~/.aws/credentials:/root/.aws/credentials -v ~/.goship.yaml:/root/.goship.yaml -v ~/.saml2aws:/root/.saml2aws -e TIMEZONE=Europe/Warsaw 724670621497.dkr.ecr.us-east-1.amazonaws.com/grid:stable grid \"\$@\""
 source ~/ghq/github.com/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
-alias zcc="cd ~/ghq/github.com/zendesk/"
+zcc() {
+  cd ~/ghq/github.com/zendesk/ &&  cd `ls | fzf`
+}
 alias zc="cd ~/ghq/github.com/zendesk/sell-core"
 
 export PATH=$PATH:~/.local/bin
