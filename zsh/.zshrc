@@ -24,6 +24,7 @@ alias gaa="git add ."
 alias gst="git status"
 alias gp="git push"
 alias gco="git checkout"
+alias gb="git branch | awk '{print $1}' | fzf | xargs git checkout && git pull"
 
 alias ghs="gh pr checks --watch"
 alias ghd="gh pr view --comments | grep -oe \"http.*spinnaker\S*\" | tail -1"
