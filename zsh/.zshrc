@@ -24,7 +24,8 @@ alias gaa="git add ."
 alias gst="git status"
 alias gp="git push"
 alias gco="git checkout"
-alias gb="git branch | awk '{print $1}' | fzf | xargs git checkout && git pull"
+alias gb="git branch | awk '{print $1}' | fzf --height 40% | xargs git checkout && git pull"
+alias gbr="gh pr list | fzf --height 40% | awk '{print $1}'  | xargs gh pr checkout"
 
 alias ghs="gh pr checks --watch"
 alias ghd="gh pr view --comments | grep -oe \"http.*spinnaker\S*\" | tail -1"
@@ -36,7 +37,10 @@ alias vi="vim"
 alias vim="nvim"
 alias ll="exa -l -g --icons"
 alias lla="ll -a"
+
 alias ccf="cd ~/.config"
+alias ccd="cd ~/ghq/\`ghq list | fzf --height 40%\`" # get list of projects from GHQ and pipe it to fzf
+
 
 # Zendesk stuff
 if [[ "$OSTYPE" == "darwin"* ]]; then 
