@@ -1,5 +1,8 @@
 export LANG=en_US.UTF-8
 
+autoload -Uz compinit
+compinit
+
 autoload -U colors && colors	# Load colors
 # Load version control information
 autoload -Uz vcs_info
@@ -53,5 +56,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 export PATH=$PATH:~/.local/bin
-[[ "$OSTYPE" == "darwin"* ]] &&  $(brew --prefix)/opt/asdf/libexec/asdf.sh
+[[ "$OSTYPE" == "darwin"* ]] && $(brew --prefix)/opt/asdf/libexec/asdf.sh
 [[ "$OSTYPE" == "linux-gnu"* ]] &&  . $HOME/.asdf/asdf.sh
