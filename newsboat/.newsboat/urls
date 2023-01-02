@@ -1,14 +1,12 @@
 https://michal.sapka.pl/en/index.xml
 https://michal.sapka.pl/en/vim/index.xml
-----------------
+https://memes.sapka.me/index.xml
 https://cprss.s3.amazonaws.com/rubyweekly.com.xml
 https://feeds.feedburner.com/digest-programming
 https://zendesk.engineering/feed
 https://shopify.engineering/blog.atom
 http://feeds.feedburner.com/HighScalability
-----------------
 http://rss.slashdot.org/Slashdot/slashdotMain
-----------------
 https://gideonwolfe.com/index.xml
 https://fabiensanglard.net/rss.xml
 https://www.gog.com/pl/news/feed
@@ -23,12 +21,10 @@ https://odysee.com/$/rss/@DistroTube:2
 https://odysee.com/$/rss/@danwood:0
 https://world.hey.com/dhh/feed.atom
 https://dev.37signals.com/feed/posts.xml
-----------------
 https://archlinux.org/feeds/news/
 https://www.pine64.org/feed/
 https://neovim.io/news.xml
 https://github.com/koekeishiya/yabai/releases.atom
----------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCQIcXQ2n0sa-7CD0NtqnrrA youtube audio "~[yt] DarkoAudio"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4xKdmAXFh4ACyhpiQ_3qBw youtube "~[yt] TechLead"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA youtube tech news "~[yt] Fireship"
@@ -44,4 +40,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCJ6KZTTnkE-s2XFJJmoTAkw you
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ youtube tech "~[yt] Beyond Fireship"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA youtube tech "~[yt] Brodie Robertson"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC21uZkfXpT8rPY-gPgMiCwA youtube tech "~[yt] Civvie 11"
-
+https://www.datagubbe.se/atom.xml tech
