@@ -9,7 +9,6 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 
 # Format the vcs_info_msg_0_ variable
-
 setopt PROMPT_SUBST
 UNAME_PROMPT=%{$fg[red]%}
 HOST_PROMPT=%{$fg[yellow]%}
@@ -19,7 +18,10 @@ zstyle ':vcs_info:git:*' formats '[%b]'
 PROMPT='[${UNAME_PROMPT}%n${RESET_PROMPT_COLOR}@${HOST_PROMPT}%m${PATH_PROMPT} %3~%{$RESET_PROMPT_COLOR%}]${vcs_info_msg_0_} %{$reset_color%}$%b '
 echo "My terminal. I like to keep it close to where my heart used to be"
 
-
+# History in cache directory:
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 # Git
 alias gc="git commit"
 alias ga="git add"
@@ -45,7 +47,9 @@ alias ccf="cd ~/.config"
 alias ccd="cd ~/ghq/\`ghq list | fzf --height 40%\`" # get list of projects from GHQ and pipe it to fzf
 
 
-# Zendesk stuff
+[[ "$OSTYPE" == "linux-gnu"* ]] &&  . $HOME/.asdf/asdf.sh
+
+# Zendesk stuff and mac config
 if [[ "$OSTYPE" == "darwin"* ]]; then 
   alias grid="docker run -it --rm -v ~/.grid.yml:/root/.grid.yml -v /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v ~/.ssh:/root/.ssh -v ~/.aws/credentials:/root/.aws/credentials -v ~/.goship.yaml:/root/.goship.yaml -v ~/.saml2aws:/root/.saml2aws -e TIMEZONE=Europe/Warsaw 724670621497.dkr.ecr.us-east-1.amazonaws.com/grid:stable grid \"\$@\""
   source ~/ghq/github.com/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
@@ -53,8 +57,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     cd ~/ghq/github.com/zendesk/ &&  cd `ls | fzf --height 40%`
   }
   alias zc="cd ~/ghq/github.com/zendesk/sell-core"
+
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
 export PATH=$PATH:~/.local/bin
-[[ "$OSTYPE" == "darwin"* ]] && $(brew --prefix)/opt/asdf/libexec/asdf.sh
-[[ "$OSTYPE" == "linux-gnu"* ]] &&  . $HOME/.asdf/asdf.sh
+
